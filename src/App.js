@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import FormData from "./FormData";
+import NavigationBar from "./NavigationBar";
+import { TableData } from "./TableData";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavigationBar />
+      <div className="d-flex justify-content-center mt-5">
+        <h1>Data Table</h1>
+      </div>
+      <div className="mx-5 mt-5">
+        <TableData />
+        <FormData />
+      </div>
     </div>
   );
 }
