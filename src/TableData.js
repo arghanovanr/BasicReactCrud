@@ -1,7 +1,7 @@
 import React from "react";
 import Table from "react-bootstrap/Table";
-
-export const TableData = () => {
+import Button from "react-bootstrap/Button";
+export default function TableData({ data, handleEdit, handleDelete }) {
   return (
     <Table striped bordered hover>
       <thead>
@@ -10,28 +10,37 @@ export const TableData = () => {
           <th>First Name</th>
           <th>Last Name</th>
           <th>Username</th>
+          <th>Action</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Larry</td>
-          <td>Bird</td>
-          <td>@twitter</td>
-        </tr>
+        {data.map((userdata) => {
+          return (
+            <tr>
+              <td>{userdata.id}</td>
+              <td>{userdata.firstname}</td>
+              <td>{userdata.lastname}</td>
+              <td>{userdata.username}</td>
+              <td>
+                <Button
+                  onClick={() => handleEdit(userdata.id)}
+                  variant="primary"
+                  className="btn btn-sm mx-2 "
+                >
+                  Edit
+                </Button>
+                <Button
+                  onClick={() => handleDelete(userdata.id)}
+                  variant="danger"
+                  className="btn btn-sm mx-2"
+                >
+                  Delete
+                </Button>
+              </td>
+            </tr>
+          );
+        })}
       </tbody>
     </Table>
   );
-};
+}

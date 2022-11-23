@@ -1,8 +1,24 @@
-import FormData from "./FormData";
+import { useState } from "react";
 import NavigationBar from "./NavigationBar";
-import { TableData } from "./TableData";
+import TableData from "./TableData";
+import FormData from "./FormData";
 
 function App() {
+  const [userdata, setUserdata] = useState([
+    {
+      id: 1,
+      firstname: "Lorem",
+      lastname: "Ipsum",
+      username: "@loremipsum",
+    },
+    {
+      id: 2,
+      firstname: "Dolor",
+      lastname: "Sit",
+      username: "@dolorsit",
+    },
+  ]);
+
   return (
     <div className="App">
       <NavigationBar />
@@ -10,7 +26,7 @@ function App() {
         <h1>Data Table</h1>
       </div>
       <div className="mx-5 mt-5">
-        <TableData />
+        <TableData data={userdata} />
         <FormData />
       </div>
     </div>
