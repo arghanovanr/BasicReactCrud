@@ -6,7 +6,6 @@ export default function TableData({ data, handleEdit, handleDelete }) {
     <Table striped bordered hover>
       <thead>
         <tr>
-          <th>#</th>
           <th>First Name</th>
           <th>Last Name</th>
           <th>Username</th>
@@ -17,7 +16,6 @@ export default function TableData({ data, handleEdit, handleDelete }) {
         {data.map((userdata) => {
           return (
             <tr>
-              <td>{userdata.id}</td>
               <td>{userdata.firstname}</td>
               <td>{userdata.lastname}</td>
               <td>{userdata.username}</td>
