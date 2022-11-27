@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/BasicReactCrud/static/css/main.c2cab247.css",
+    "main.js": "/BasicReactCrud/static/js/main.02b3a33f.js",
+    "static/js/787.2426cf52.chunk.js": "/BasicReactCrud/static/js/787.2426cf52.chunk.js",
+    "index.html": "/BasicReactCrud/index.html",
+    "main.c2cab247.css.map": "/BasicReactCrud/static/css/main.c2cab247.css.map",
+    "main.02b3a33f.js.map": "/BasicReactCrud/static/js/main.02b3a33f.js.map",
+    "787.2426cf52.chunk.js.map": "/BasicReactCrud/static/js/787.2426cf52.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c2cab247.css",
+    "static/js/main.02b3a33f.js"
+  ]
+}
